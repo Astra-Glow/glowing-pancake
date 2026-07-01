@@ -1,0 +1,11 @@
+[
+  {
+    "op": "add",
+    "path": "/entryManifest/世界观/现代日常",
+    "value": {
+      "abstract": "南方城市日常背景；初中认识的朋友合租，各做各的，安静自在",
+      "path": "世界书/世界观/现代日常.yaml",
+      "keywords": []
+    }
+  }
+]

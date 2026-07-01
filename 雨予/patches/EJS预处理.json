@@ -1,0 +1,13 @@
+[
+  {
+    "op": "add",
+    "path": "/entryManifest/EJS预处理/EJS预处理",
+    "value": {
+      "abstract": "@@generate_before：将MVU变量 雨予.好感度/信赖值 映射为 affection/trust 供后续条目使用",
+      "contents": [
+        { "file": "世界书/EJS/EJS预处理.txt" }
+      ],
+      "keywords": []
+    }
+  }
+]

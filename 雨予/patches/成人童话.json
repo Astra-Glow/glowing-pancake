@@ -1,0 +1,14 @@
+[
+  {
+    "op": "add",
+    "path": "/entryManifest/事件/成人童话",
+    "value": {
+      "abstract": "好感度70-80触发；雨予发送自己写的童话，实质是表白；{{user}}的反应大幅影响信赖值",
+      "contents": [
+        { "content": "@@if affection >= 70 && affection < 80" },
+        { "file": "世界书/事件/成人童话.txt" }
+      ],
+      "keywords": ["雨予"]
+    }
+  }
+]

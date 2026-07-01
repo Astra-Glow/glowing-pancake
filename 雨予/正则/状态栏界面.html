@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .yy-sb { padding: 6px 10px; border-top: 1px solid rgba(128,128,128,0.18); font-size: 0.82em; color: #888; }
+  </style>
+  <script type="module">
+    function setText(id, value) {
+      const node = document.getElementById(id);
+      if (node) node.textContent = value;
+    }
+
+    function render() {
+      const vars = getAllVariables();
+      const affection = _.get(vars, 'stat_data.雨予.好感度');
+      const trust = _.get(vars, 'stat_data.雨予.信赖值');
+      setText('yy-af', String(affection ?? 25));
+      setText('yy-tr', String(trust ?? 30));
+    }
+
+    async function init() {
+      await waitGlobalInitialized('Mvu');
+      for (let i = 0; i < 20; i++) {
+        const vars = getAllVariables();
+        if (_.has(vars, 'stat_data.雨予')) break;
+        await new Promise(r => setTimeout(r, 250));
+      }
+      render();
+      eventOn(Mvu.events.VARIABLE_INITIALIZED, render);
+      eventOn(Mvu.events.VARIABLE_UPDATE_ENDED, render);
+    }
+    $(errorCatched(init));
+  </script>
+</head>
+<body>
+  <div class="yy-sb">雨予　·　好感度 <span id="yy-af">25</span>　·　信赖值 <span id="yy-tr">30</span></div>
+</body>
+</html>

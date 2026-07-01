@@ -1,0 +1,17 @@
+[
+  {
+    "op": "add",
+    "path": "/entryManifest/角色/雨予_二次解释",
+    "value": {
+      "part": "other",
+      "scope": "specific",
+      "abstract": "雨予自述语气的二次解释：纠正AI对阴角、xp坏掉、冷淡/温柔、坦诚/回避的刻板理解",
+      "contents": [
+        { "content": "---\n<character_rephrase character=\"雨予\">" },
+        { "file": "世界书/角色/雨予/二次解释.yaml" },
+        { "content": "</character_rephrase>" }
+      ],
+      "keywords": ["雨予"]
+    }
+  }
+]

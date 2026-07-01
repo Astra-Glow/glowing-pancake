@@ -1,0 +1,188 @@
+{
+  "projectName": "雨予",
+  "worldbookName": "雨予",
+  "form": "charactercard",
+  "mvu": true,
+  "entryManifest": {
+    "世界观": {
+      "现代日常": {
+        "path": "世界书/世界观/现代日常.yaml",
+        "keywords": [],
+        "abstract": "南方城市日常背景；初中认识的朋友合租，各做各的，安静自在"
+      }
+    },
+    "扮演准则": {
+      "扮演准则": {
+        "path": "世界书/扮演准则/扮演准则.yaml",
+        "keywords": [],
+        "abstract": "第三人称口语化叙事；关系推进由user驱动；暧昧期前不写内心独白；通过分享文字和发散话题间接表达"
+      }
+    },
+    "角色": {
+      "雨予_基础信息": {
+        "scope": "specific",
+        "part": "basic",
+        "keywords": [
+          "雨予"
+        ],
+        "abstract": "雨予基础档案：自豪的阴角，合租室友，xp系统坏掉，高中有过一段无疾而终的感情",
+        "contents": [
+          {
+            "content": "---\n<character_basic character=\"雨予\">"
+          },
+          {
+            "file": "世界书/角色/雨予/基础信息.yaml"
+          },
+          {
+            "content": "</character_basic>"
+          }
+        ]
+      },
+      "雨予_性格调色盘": {
+        "scope": "specific",
+        "part": "personality",
+        "keywords": [
+          "雨予"
+        ],
+        "abstract": "双底色(平静自洽+冷淡) + 4阶段调色盘：日常期→暧昧期→恋人·真实/表演，EJS段落控制",
+        "contents": [
+          {
+            "content": "---\n<character_personality character=\"雨予\">"
+          },
+          {
+            "file": "世界书/角色/雨予/性格调色盘.txt"
+          },
+          {
+            "content": "</character_personality>"
+          }
+        ]
+      },
+      "雨予_二次解释": {
+        "scope": "specific",
+        "part": "other",
+        "keywords": [
+          "雨予"
+        ],
+        "abstract": "雨予自述语气的二次解释：纠正AI对阴角、xp坏掉、冷淡/温柔、坦诚/回避的刻板理解",
+        "contents": [
+          {
+            "content": "---\n<character_rephrase character=\"雨予\">"
+          },
+          {
+            "file": "世界书/角色/雨予/二次解释.yaml"
+          },
+          {
+            "content": "</character_rephrase>"
+          }
+        ]
+      }
+    },
+    "EJS预处理": {},
+    "MVU": {},
+    "事件": {
+      "成人童话": {
+        "abstract": "好感度70-80触发；雨予发送自己写的童话，实质是表白；{{user}}的反应大幅影响信赖值",
+        "contents": [
+          {
+            "content": "@@if affection >= 70 && affection < 80"
+          },
+          {
+            "file": "世界书/事件/成人童话.txt"
+          }
+        ],
+        "keywords": [
+          "雨予"
+        ]
+      }
+    }
+  },
+  "typeLists": {
+    "before_char": [
+      "EJS预处理",
+      "世界观",
+      "扮演准则"
+    ],
+    "after_char": [
+      "角色"
+    ],
+    "depth": [
+      "事件",
+      "MVU"
+    ]
+  },
+  "strategyThresholds": {
+    "世界观": "Infinity",
+    "扮演准则": "Infinity",
+    "角色": {
+      "basic": {
+        "threshold": 5,
+        "required": true
+      },
+      "personality": {
+        "threshold": 2,
+        "required": true
+      },
+      "tri_faceted": {
+        "threshold": 2,
+        "required": false
+      },
+      "other": {
+        "threshold": 2,
+        "required": false
+      }
+    },
+    "事件": 0,
+    "EJS预处理": "Infinity",
+    "MVU": {
+      "initvar": {
+        "threshold": null,
+        "required": false
+      },
+      "output_format": {
+        "threshold": "Infinity",
+        "required": false
+      },
+      "update_rules": {
+        "threshold": "Infinity",
+        "required": false
+      },
+      "variable_list": {
+        "threshold": "Infinity",
+        "required": false
+      }
+    }
+  },
+  "partOrder": {
+    "角色": [
+      "basic",
+      "personality",
+      "tri_faceted",
+      "other"
+    ],
+    "地理": [
+      "region",
+      "scene",
+      "faction"
+    ],
+    "MVU": [
+      "variable_list",
+      "update_rules",
+      "output_format",
+      "initvar"
+    ],
+    "时间线": [
+      "history",
+      "plot"
+    ]
+  },
+  "depth_defaults": {
+    "role": "system",
+    "depth": 0
+  },
+  "description": "",
+  "first_messages": [],
+  "creator": "",
+  "creator_notes": "",
+  "version": "1.0",
+  "create_date": "2026-06-26T17:39:32.987Z"
+}

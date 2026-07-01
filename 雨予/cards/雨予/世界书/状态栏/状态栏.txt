@@ -1,0 +1,36 @@
+@@render_after
+@@iframe
+@@if !is_user && !is_system
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+body { margin: 0; padding: 6px 0 0; font-family: system-ui, sans-serif; font-size: 12px; color: #888; }
+.sb { border-top: 1px solid rgba(128,128,128,0.2); padding-top: 6px; letter-spacing: 0.04em; }
+</style>
+<script type="module">
+function render() {
+  const el = document.getElementById('sb');
+  try {
+    const vars = getAllVariables();
+    const af = _.get(vars, 'stat_data.雨予.好感度', '?');
+    const tr = _.get(vars, 'stat_data.雨予.信赖值', '?');
+    el.textContent = '雨予　·　好感度 ' + af + '　·　信赖值 ' + tr;
+  } catch(e) {
+    el.textContent = 'err: ' + e.message;
+  }
+}
+try {
+  render();
+  eventOn(Mvu.events.VARIABLE_INITIALIZED, render);
+  eventOn(Mvu.events.VARIABLE_UPDATE_ENDED, render);
+} catch(e) {
+  document.getElementById('sb').textContent = 'init err: ' + e.message;
+}
+</script>
+</head>
+<body>
+<div class="sb" id="sb">···</div>
+</body>
+</html>

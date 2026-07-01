@@ -1,0 +1,17 @@
+[
+  {
+    "op": "add",
+    "path": "/entryManifest/角色/雨予_基础信息",
+    "value": {
+      "part": "basic",
+      "scope": "specific",
+      "abstract": "雨予基础档案：自豪的阴角，合租室友，xp系统坏掉，高中有过一段无疾而终的感情",
+      "contents": [
+        { "content": "---\n<character_basic character=\"雨予\">" },
+        { "file": "世界书/角色/雨予/基础信息.yaml" },
+        { "content": "</character_basic>" }
+      ],
+      "keywords": ["雨予"]
+    }
+  }
+]

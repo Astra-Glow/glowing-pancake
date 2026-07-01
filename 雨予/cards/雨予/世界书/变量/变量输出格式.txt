@@ -1,0 +1,27 @@
+---
+<update_variable_rules>
+规则:
+  - 在每次回复末尾一次性输出分析和更新指令
+  - 更新指令严格遵循 **JSON Patch (RFC 6902)** 标准，仅允许以下操作：`replace`（替换已有路径的值）、`add`（仅用于向对象或数组中插入新项）、`remove`
+  - 输出必须是包含操作对象的合法 JSON 数组
+有效路径:
+  - /雨予/好感度
+  - /雨予/信赖值
+  - 仅以上路径可用于更新，禁止使用未定义的路径
+格式: |-
+  <UpdateVariable>
+  <Analysis>（中文，不超过400字）
+  - ${计算经过的时间: ...}
+  - ${判断是否属于特殊情况或时间跨度较大，是否允许大幅变动: 是/否}
+  - ${根据每个变量对应的 check 规则，仅依据当前回复内容（而非之前的剧情）逐项分析: ...}
+  - ${如果是数值类型，写出计算过程: 旧值 (X) + 变化量 (Y) = 新值 (Z)}
+  </Analysis>
+  <JSONPatch>
+  [
+    { "op": "replace", "path": "${/路径/到/变量}", "value": ${新值} },
+    ...
+  ]
+  </JSONPatch>
+  </UpdateVariable>
+  <StatusPlaceHolderImpl/>
+</update_variable_rules>

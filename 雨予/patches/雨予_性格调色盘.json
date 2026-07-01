@@ -1,0 +1,17 @@
+[
+  {
+    "op": "add",
+    "path": "/entryManifest/角色/雨予_性格调色盘",
+    "value": {
+      "part": "personality",
+      "scope": "specific",
+      "abstract": "双底色(平静自洽+冷淡) + 4阶段调色盘：日常期→暧昧期→恋人·真实/表演，EJS段落控制",
+      "contents": [
+        { "content": "---\n<character_personality character=\"雨予\">" },
+        { "file": "世界书/角色/雨予/性格调色盘.txt" },
+        { "content": "</character_personality>" }
+      ],
+      "keywords": ["雨予"]
+    }
+  }
+]

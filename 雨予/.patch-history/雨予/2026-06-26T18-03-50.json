@@ -1,0 +1,102 @@
+{
+  "projectName": "雨予",
+  "worldbookName": "雨予",
+  "form": "charactercard",
+  "mvu": true,
+  "entryManifest": {
+    "世界观": {},
+    "扮演准则": {},
+    "角色": {},
+    "EJS预处理": {},
+    "MVU": {}
+  },
+  "typeLists": {
+    "before_char": [
+      "EJS预处理",
+      "世界观",
+      "扮演准则"
+    ],
+    "after_char": [
+      "角色"
+    ],
+    "depth": [
+      "事件",
+      "MVU"
+    ]
+  },
+  "strategyThresholds": {
+    "世界观": "Infinity",
+    "扮演准则": "Infinity",
+    "角色": {
+      "basic": {
+        "threshold": 5,
+        "required": true
+      },
+      "personality": {
+        "threshold": 2,
+        "required": true
+      },
+      "tri_faceted": {
+        "threshold": 2,
+        "required": false
+      },
+      "other": {
+        "threshold": 2,
+        "required": false
+      }
+    },
+    "事件": 0,
+    "EJS预处理": "Infinity",
+    "MVU": {
+      "initvar": {
+        "threshold": null,
+        "required": false
+      },
+      "output_format": {
+        "threshold": "Infinity",
+        "required": false
+      },
+      "update_rules": {
+        "threshold": "Infinity",
+        "required": false
+      },
+      "variable_list": {
+        "threshold": "Infinity",
+        "required": false
+      }
+    }
+  },
+  "partOrder": {
+    "角色": [
+      "basic",
+      "personality",
+      "tri_faceted",
+      "other"
+    ],
+    "地理": [
+      "region",
+      "scene",
+      "faction"
+    ],
+    "MVU": [
+      "variable_list",
+      "update_rules",
+      "output_format",
+      "initvar"
+    ],
+    "时间线": [
+      "history",
+      "plot"
+    ]
+  },
+  "depth_defaults": {
+    "role": "system",
+    "depth": 0
+  },
+  "description": "",
+  "first_messages": [],
+  "creator": "",
+  "creator_notes": "",
+  "version": "1.0",
+  "create_date": "2026-06-26T17:39:32.987Z"
+}

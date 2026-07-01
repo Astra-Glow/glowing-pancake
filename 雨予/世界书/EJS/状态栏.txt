@@ -1,0 +1,1 @@
+好感度 <%- getvar('stat_data.雨予.好感度', { defaults: 25 }) %> · 信赖值 <%- getvar('stat_data.雨予.信赖值', { defaults: 30 }) %>
