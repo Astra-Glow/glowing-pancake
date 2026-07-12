@@ -3,7 +3,7 @@ project:
   worldbookName: 雨予
   form: charactercard
   mvu: true
-  avatar: null  # 无头像，打包为 .json
+  avatar: avatar.png  # 鲨鱼抱枕头像，打包为 .png
 
 world:
   overview: |
@@ -41,7 +41,7 @@ characters:
             大量交流通过梗图和抽象完成。已经很舒适，但还没意识到有超出朋友的感觉。
         - name: 暧昧期
           main: [温和, 矛盾]
-          accent: [克制, 好奇]
+          accent: [克制, 好奇, 幽默]
           description: |
             意识到自己对{{user}}的感觉不只是"室友情"，但不确定值不值得走下去。
             会观察对方——是否坦诚，是否清醒，是否真的懂她。

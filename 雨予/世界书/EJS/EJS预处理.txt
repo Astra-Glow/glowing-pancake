@@ -2,4 +2,5 @@
 <%_
 define('affection', getvar('stat_data.雨予.好感度', { defaults: 0 }) || 0);
 define('trust', getvar('stat_data.雨予.信赖值', { defaults: 0 }) || 0);
+define('fairytale', getvar('stat_data.雨予.成人童话已发生', { defaults: false }) || false);
 _%>

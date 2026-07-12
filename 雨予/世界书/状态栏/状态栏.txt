@@ -15,8 +15,7 @@ function render() {
   try {
     const vars = getAllVariables();
     const af = _.get(vars, 'stat_data.雨予.好感度', '?');
-    const tr = _.get(vars, 'stat_data.雨予.信赖值', '?');
-    el.textContent = '雨予　·　好感度 ' + af + '　·　信赖值 ' + tr;
+    el.textContent = '雨予　·　好感度 ' + af;
   } catch(e) {
     el.textContent = 'err: ' + e.message;
   }
