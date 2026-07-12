@@ -14,9 +14,7 @@
     function render() {
       const vars = getAllVariables();
       const affection = _.get(vars, 'stat_data.雨予.好感度');
-      const trust = _.get(vars, 'stat_data.雨予.信赖值');
       setText('yy-af', String(affection ?? 25));
-      setText('yy-tr', String(trust ?? 30));
     }
 
     async function init() {
@@ -34,6 +32,6 @@
   </script>
 </head>
 <body>
-  <div class="yy-sb">雨予　·　好感度 <span id="yy-af">25</span>　·　信赖值 <span id="yy-tr">30</span></div>
+  <div class="yy-sb">雨予　·　好感度 <span id="yy-af">25</span></div>
 </body>
 </html>

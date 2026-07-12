@@ -41,7 +41,7 @@
         "keywords": [
           "雨予"
         ],
-        "abstract": "雨予基础档案：自豪的阴角，合租室友，xp系统坏掉，高中一段无疾而终的感情，安静如同事的父母，互称设定（恩师梗）",
+        "abstract": "雨予基础档案：自豪的阴角，合租室友，xp系统坏掉，高中有过一段无疾而终的感情",
         "contents": [
           {
             "content": "---\n<character_basic character=\"雨予\">"
@@ -68,7 +68,7 @@
         "keywords": [
           "雨予"
         ],
-        "abstract": "底色(平静自洽+冷淡)附真/演自用分类学与豁免章 + 4阶段调色盘：日常期→暧昧期→恋人·真实/表演（EJS段落控制，恋人阶段以成人童话flag为门）+ NSFW调色盘（真实线xp闭环/表演线完美假面）",
+        "abstract": "双底色(平静自洽+冷淡) + 4阶段调色盘：日常期→暧昧期→恋人·真实/表演，EJS段落控制",
         "contents": [
           {
             "content": "---\n<character_personality character=\"雨予\">"
@@ -101,7 +101,7 @@
         "keywords": [
           "雨予"
         ],
-        "abstract": "雨予自述语气的二次解释：纠正对阴角、xp坏掉、冷淡/温柔、坦诚/回避的刻板理解；关于恋爱与双标的自辩（理论在她嘴里漏水的两处）",
+        "abstract": "雨予自述语气的二次解释：纠正AI对阴角、xp坏掉、冷淡/温柔、坦诚/回避的刻板理解",
         "contents": [
           {
             "content": "---\n<character_rephrase character=\"雨予\">"
@@ -457,6 +457,5 @@
     "scriptId": "5b3b09af-35e3-4149-a0f7-2f08776ed6a1",
     "schemaPath": "schema.ts",
     "importUrl": "https://testingcf.jsdelivr.net/gh/StageDog/tavern_resource/dist/util/mvu_zod.js"
-  },
-  "avatar": "avatar.png"
+  }
 }

@@ -2,7 +2,7 @@
     "projects": {
         "雨予": {
             "state_file": "cards/雨予/tavern-cards-state.json",
-            "artifact": "cards/雨予/雨予.json"
+            "artifact": "cards/雨予/雨予.png"
         }
     },
     "default_part_order": {
