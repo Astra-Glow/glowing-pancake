@@ -9,6 +9,7 @@
         "path": "世界书/世界观/现代日常.yaml",
         "keywords": [],
         "abstract": "南方城市日常背景；初中认识的朋友合租，各做各的，安静自在",
+        "uid": 0,
         "enabled": true,
         "strategy": {
           "type": "constant"
@@ -24,6 +25,7 @@
         "path": "世界书/扮演准则/扮演准则.yaml",
         "keywords": [],
         "abstract": "第三人称口语化叙事；关系推进由user驱动；暧昧期前不写内心独白；通过分享文字和发散话题间接表达",
+        "uid": 1,
         "enabled": true,
         "strategy": {
           "type": "constant"
@@ -53,6 +55,7 @@
             "content": "</character_basic>"
           }
         ],
+        "uid": 2,
         "enabled": true,
         "strategy": {
           "type": "constant"
@@ -86,6 +89,7 @@
             "content": "</character_personality>"
           }
         ],
+        "uid": 3,
         "enabled": true,
         "strategy": {
           "type": "constant"
@@ -113,6 +117,7 @@
             "content": "</character_rephrase>"
           }
         ],
+        "uid": 4,
         "enabled": true,
         "strategy": {
           "type": "constant"
@@ -132,6 +137,7 @@
             "file": "世界书/EJS/EJS预处理.txt"
           }
         ],
+        "uid": 5,
         "enabled": true,
         "strategy": {
           "type": "constant"
@@ -148,6 +154,7 @@
         "part": "output_format",
         "keywords": [],
         "abstract": "MVU变量输出格式",
+        "uid": 6,
         "enabled": true,
         "strategy": {
           "type": "constant"
@@ -164,6 +171,7 @@
         "part": "variable_list",
         "keywords": [],
         "abstract": "MVU变量列表",
+        "uid": 7,
         "enabled": true,
         "strategy": {
           "type": "constant"
@@ -180,6 +188,7 @@
         "part": "update_rules",
         "keywords": [],
         "abstract": "MVU变量更新规则",
+        "uid": 8,
         "enabled": true,
         "strategy": {
           "type": "constant"
@@ -196,6 +205,7 @@
         "part": "initvar",
         "keywords": [],
         "abstract": "MVU初始变量",
+        "uid": 9,
         "enabled": false,
         "position": {
           "type": "at_depth",
@@ -210,15 +220,16 @@
         "keywords": [
           "雨予"
         ],
-        "abstract": "好感度≥70且事件未发生时展示；雨予发送自己写的童话，实质是表白；<user>的反应大幅影响信赖值；事件收尾置 成人童话已发生=true 后条目退场",
+        "abstract": "好感度70-80触发；雨予发送自己写的童话，实质是表白；{{user}}的反应大幅影响信赖值",
         "contents": [
           {
-            "content": "@@if (getvar('stat_data.雨予.好感度', { defaults: 0 }) || 0) >= 70 && !(getvar('stat_data.雨予.成人童话已发生', { defaults: false }) || false)"
+            "content": "@@if (getvar('stat_data.雨予.好感度', { defaults: 0 }) || 0) >= 70 && (getvar('stat_data.雨予.好感度', { defaults: 0 }) || 0) < 80"
           },
           {
             "file": "世界书/事件/成人童话.txt"
           }
         ],
+        "uid": 10,
         "enabled": true,
         "strategy": {
           "type": "selective",
@@ -365,6 +376,18 @@
             ]
           },
           "data": {}
+        },
+        "Zod": {
+          "type": "script",
+          "script_file": "脚本/Zod.txt",
+          "enabled": true,
+          "id": "5b3b09af-35e3-4149-a0f7-2f08776ed6a1",
+          "info": "",
+          "button": {
+            "enabled": true,
+            "buttons": []
+          },
+          "data": {}
         }
       },
       "variables": {}
@@ -451,11 +474,5 @@
       "runOnEdit": false,
       "substituteRegex": 0
     }
-  },
-  "zod": {
-    "scriptName": "Zod",
-    "scriptId": "5b3b09af-35e3-4149-a0f7-2f08776ed6a1",
-    "schemaPath": "schema.ts",
-    "importUrl": "https://testingcf.jsdelivr.net/gh/StageDog/tavern_resource/dist/util/mvu_zod.js"
   }
 }

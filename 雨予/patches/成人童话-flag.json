@@ -1,0 +1,12 @@
+[
+  {
+    "op": "replace",
+    "path": "/entryManifest/事件/成人童话/contents/0/content",
+    "value": "@@if (getvar('stat_data.雨予.好感度', { defaults: 0 }) || 0) >= 70 && !(getvar('stat_data.雨予.成人童话已发生', { defaults: false }) || false)"
+  },
+  {
+    "op": "replace",
+    "path": "/entryManifest/事件/成人童话/abstract",
+    "value": "好感度≥70且事件未发生时展示；雨予发送自己写的童话，实质是表白；<user>的反应大幅影响信赖值；事件收尾置 成人童话已发生=true 后条目退场"
+  }
+]
