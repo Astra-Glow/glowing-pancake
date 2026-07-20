@@ -1,0 +1,127 @@
+{
+  "projectName": "嘉欣",
+  "worldbookName": "嘉欣",
+  "form": "charactercard",
+  "mvu": false,
+  "entryManifest": {
+    "世界观": {
+      "校园日常": {
+        "path": "世界书/世界观/校园日常.yaml",
+        "keywords": [],
+        "abstract": "当代南方城市公立高中，午休可用多媒体，校服裙装，小卖部辣条奶茶炸鸡"
+      }
+    },
+    "扮演准则": {
+      "扮演准则": {
+        "path": "世界书/扮演准则/扮演准则.yaml",
+        "keywords": [],
+        "abstract": "deadpan第三人称叙事；喜剧来自豪感与行为不成比例；禁止自嘲自觉、说教、自卑、道具升级"
+      }
+    },
+    "角色": {
+      "嘉欣_基础信息": {
+        "scope": "specific",
+        "part": "basic",
+        "keywords": [
+          "嘉欣"
+        ],
+        "abstract": "嘉欣基础档案：一米五五的JK，因小学身高没过线从此研究科学长高，保温杯厚裤袜熟鸡蛋三件套，同桌是<user>",
+        "contents": [
+          {
+            "content": "---\n<character_basic character=\"嘉欣\">"
+          },
+          {
+            "file": "世界书/角色/嘉欣/基础信息.yaml"
+          },
+          {
+            "content": "</character_basic>"
+          }
+        ]
+      },
+      "嘉欣_性格调色盘": {
+        "part": "personality",
+        "scope": "specific",
+        "keywords": [
+          "嘉欣"
+        ],
+        "abstract": "底色笃定 + 主色调豪气真诚 + 点缀不服关怀；健康即豪的认知滤镜、保温杯仪式感、身高执念、对<user>的健康传教",
+        "contents": [
+          {
+            "content": "---\n<character_personality character=\"嘉欣\">"
+          },
+          {
+            "file": "世界书/角色/嘉欣/性格调色盘.yaml"
+          },
+          {
+            "content": "</character_personality>"
+          }
+        ]
+      }
+    }
+  },
+  "typeLists": {
+    "before_char": [
+      "世界观",
+      "扮演准则"
+    ],
+    "after_char": [
+      "角色"
+    ],
+    "depth": []
+  },
+  "strategyThresholds": {
+    "世界观": "Infinity",
+    "扮演准则": "Infinity",
+    "角色": {
+      "basic": {
+        "threshold": 5,
+        "required": true
+      },
+      "personality": {
+        "threshold": 2,
+        "required": true
+      },
+      "tri_faceted": {
+        "threshold": 2,
+        "required": false
+      },
+      "other": {
+        "threshold": 2,
+        "required": false
+      }
+    }
+  },
+  "partOrder": {
+    "角色": [
+      "basic",
+      "personality",
+      "tri_faceted",
+      "other"
+    ],
+    "地理": [
+      "region",
+      "scene",
+      "faction"
+    ],
+    "MVU": [
+      "variable_list",
+      "update_rules",
+      "output_format",
+      "initvar"
+    ],
+    "时间线": [
+      "history",
+      "plot"
+    ]
+  },
+  "depth_defaults": {
+    "role": "system",
+    "depth": 0
+  },
+  "description": "",
+  "first_messages": [],
+  "creator": "",
+  "creator_notes": "",
+  "version": "1.0",
+  "create_date": "2026-07-18T01:53:38.511Z"
+}
